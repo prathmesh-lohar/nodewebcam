@@ -1,6 +1,11 @@
 const express = require('express');
 const NodeWebcam = require('node-webcam');
 const app = express();
+// const router = express.Router();
+// const serverless = require('serverless-http');
+
+let records = [];
+
 const port = 3000;
 
 // Configure webcam options
@@ -44,3 +49,5 @@ app.get('/stream', (req, res) => {
 app.listen(port, () => {
     console.log(`MJPEG stream running at http://localhost:${port}/stream`);
 });
+
+
